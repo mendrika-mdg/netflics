@@ -2,9 +2,6 @@ import streamlit as st
 st.set_page_config(layout="wide")
 from datetime import time, datetime
 import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.backends.backend_agg import RendererAgg
-_lock = RendererAgg.lock
 from datetime import datetime, time, timedelta
 import os
 url_data = ''
