@@ -85,7 +85,7 @@ elif page == "Architecture":
     st.title("Convective Storm Nowcasting Using Machine Learning")
     st.header("Model Architecture")
 
-    st.image("/localhome/home/mmmhr/deploy-web/images/lstm.png", caption="Convective Storm Nowcasting Project", use_column_width=False)
+    st.image("./images/lstm.png", caption="Convective Storm Nowcasting Project", use_column_width=False)
 
     st.markdown('<div class="footer">&copy; 2024 Mendrika Rakotomanga. All Rights Reserved.</div>', unsafe_allow_html=True)
 
