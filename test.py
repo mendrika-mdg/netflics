@@ -100,7 +100,7 @@ elif page == "Nowcast Portal":
 
         selected_date = st.date_input("Choose a date", datetime.today())
         current_time = datetime.now().time()
-        selected_time = st.time_input("Choose a time", current_time)
+        selected_time = st.time_input("Choose a time")
         # Display selected time
         st.write(f"Selected time: {selected_time.strftime('%H:%M')}")
 
