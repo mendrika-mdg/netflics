@@ -114,7 +114,7 @@ elif page == "Nowcast Portal":
 
         st.subheader("Latest Observation")
         slider1 = st.select_slider( "Select a time", options=[-120, -90, -60, -30, 0],  value=0 )
-        st.write(f"Observation: t_0 - {slider1} min")
+        #st.write(f"Observation: t_0 - {slider1} min")
 
         image = Image.open("./images/full-input-202007011830(t0).png")
         st.image(image, caption=f"Observation at {slider1} minutes")
