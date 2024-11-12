@@ -102,7 +102,7 @@ elif page == "Nowcast Portal":
         current_time = datetime.now().time()
         selected_time = st.time_input("Choose a time")
         # Display selected time
-        st.write(f"Selected time: {selected_time.strftime('%H:%M')}")
+        #st.write(f"Selected time: {selected_time.strftime('%H:%M')}")
 
         formatted_date = selected_date.strftime('%Y%m%d')
         formatted_time = selected_time.strftime('%H%M')
@@ -110,7 +110,7 @@ elif page == "Nowcast Portal":
         input_t0 = f"Hist_cores_{formatted_date}{formatted_time}.nc"
         file_name_t0 = f"Hist_cores_{formatted_date}{formatted_time}.nc"
 
-        st.write(formatted_time)
+        #st.write(formatted_time)
 
         st.subheader("Latest Observation")
         slider1 = st.select_slider( "Select a time", options=[-120, -90, -60, -30, 0],  value=0 )
