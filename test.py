@@ -59,13 +59,14 @@ if page == "Home":
 
     st.header("Project Abstract")
     abstract = """
-    This study investigates convective storm nowcasting using a CNN-based deep learning architecture, designed to predict storm occurrence probabilities. 
-    The model utilizes a tabular dataset extracted from satellite observations between 2004 and 2022, in collaboration with the UK Centre for Ecology and Hydrology (UKCEH). 
-    Key input features include time of observation, latitude, longitude, intensity, size, and the distance to the five nearest storms. 
-    This research aims to provide timely storm predictions for urban areas in Africa, with a focus on improving public safety and disaster management. 
-    Furthermore, a 2D wavelet transform is employed to enhance feature extraction, enabling the model to capture complex spatial and temporal relationships. 
-    Future work will expand the model's capabilities by integrating additional data sources such as wind shear and soil moisture and exploring advanced architectures like Convolutional LSTM (ConvLSTM) networks. 
-    This research contributes to the ongoing efforts in the field of storm nowcasting and aims to advance the accuracy and reliability of storm predictions.
+
+    Convective storm nowcasting plays a crucial role in early warning and mitigating the impact of severe weather. This study introduces a fast, simple, yet effective object-based approach using machine learning. 
+    Storm objects are identified via a 2D wavelet transform on cloud-top temperature satellite data. Features such as time of observation ($t_0$), latitude, longitude, size, distance, and wavelet power of the five nearest storms to a given location are used to predict storm occurrence 1 to 6 hours ahead. 
+    Initial results for Dakar outperformed an operational conditional climatology model for 1-, 3-, and 6-hour lead times. 
+    Explainable AI techniques, such as Shapley values, were used to ensure the model’s predictions are meteorologically consistent. 
+    The model was expanded to cover a larger region while maintaining the input structure. Additionally, modifications were made to include LSTMs for sequential storm information and convolutional layers for gridded nowcasting. 
+    Performance, evaluated using the Fractions Skill Score (FSS), showed skill for 1- and 3-hour lead times.
+    
     """
     st.success(abstract)
 
@@ -98,7 +99,7 @@ elif page == "Nowcast Portal":
 
     with observation:
 
-        selected_date = st.date_input("Choose a date", datetime.today())
+        selected_date = st.date_input("Choose a date")
         current_time = datetime.now().time()
         selected_time = st.time_input("Choose a time")
         # Display selected time
