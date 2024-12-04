@@ -9,6 +9,7 @@ url_data = ''
 from PIL import Image
 import io
 
+
 header_footer_css = """
     <style>
     .header {
@@ -44,6 +45,14 @@ header_footer_css = """
 
 ########################################################################### HEADER ##########################################################################################################
 
+st.set_page_config(
+    page_title="Object-based Nowcasting",  # Set the title of the page
+    page_icon="🌧️",               # Optional: Set an icon for the page
+    layout="wide"                 # Optional: Choose layout ("centered" or "wide")
+)
+
+
+
 st.markdown(header_footer_css, unsafe_allow_html=True)
 #st.markdown('<div class="header">Welcome to My Streamlit App</div>', unsafe_allow_html=True)
 
@@ -70,7 +79,7 @@ if page == "Home":
     """
     st.success(abstract)
 
-    st.image("./images/new-region.png", caption="Convective Storm Nowcasting Project", use_column_width=False)
+    st.image("./images/new-region.png", caption="Object-Based Approach to Convective Storm Nowcasting", use_column_width=False)
 
     st.info(
         """
@@ -86,7 +95,7 @@ elif page == "Architecture":
     st.title("Convective Storm Nowcasting Using Machine Learning")
     st.header("Model Architecture")
 
-    st.image("./images/lstm.png", caption="Convective Storm Nowcasting Project", use_column_width=False)
+    st.image("./images/lstm.png", caption="Model Architecture", use_column_width=False)
 
     st.markdown('<div class="footer">&copy; 2024 Mendrika Rakotomanga. All Rights Reserved.</div>', unsafe_allow_html=True)
 
@@ -98,10 +107,12 @@ elif page == "Nowcast Portal":
     observation, spacer, nowcast = st.columns([1, 0.5, 1])  # Adjust the width ratios as needed
 
     with observation:
+        date_object = datetime(2020, 7, 11)
+        selected_date = st.date_input("Choose a date", date_object)
 
-        selected_date = st.date_input("Choose a date")
+        time_object = time(18, 30)
         current_time = datetime.now().time()
-        selected_time = st.time_input("Choose a time")
+        selected_time = st.time_input("Choose a time", time_object)
         # Display selected time
         #st.write(f"Selected time: {selected_time.strftime('%H:%M')}")
 
