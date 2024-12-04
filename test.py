@@ -1,5 +1,4 @@
 import streamlit as st
-st.set_page_config(layout="wide")
 from datetime import time, datetime
 import numpy as np
 from datetime import datetime, time, timedelta
