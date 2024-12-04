@@ -74,9 +74,9 @@ if page == "Home":
 
     st.info(
         """
-        **Goal**: To leverage information about the five nearest storms 
+        **Goal**: To use information about the five nearest storms 
         (time of observation, latitude, longitude, size, distance) 
-        to predict storm occurrences at different lead times using a CNN-based deep learning architecture.
+        to predict storm occurrences at different lead times using a hybrid LSTM-CNN-based deep learning architecture.
         """)
 
     st.markdown('<div class="footer">&copy; 2024 Mendrika Rakotomanga. All Rights Reserved.</div>', unsafe_allow_html=True)
@@ -202,7 +202,7 @@ elif page == "Contact us":
 
     # Optional: Display a footer or additional information
     st.markdown("---")
-    st.write("You can also reach us at [contact@example.com](mailto:contact@example.com) or call us at +123 456 7890.")
+    st.write("You can also reach us at [mmmhr@leeds.ac.uk](mailto:mmmhr@leeds.ac.uk)")
 
     st.empty()  
     st.markdown('<div class="footer">&copy; 2024 Mendrika Rakotomanga. All Rights Reserved.</div>', unsafe_allow_html=True)    
